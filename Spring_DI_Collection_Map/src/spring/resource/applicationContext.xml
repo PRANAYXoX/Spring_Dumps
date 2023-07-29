@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+ <bean id="std" class="spring.beans.Student">
+ <!-- collaborators and configuration for this bean go here -->
+ 	<property name="name" value="Chris"/>
+ 	<property name="stdId" value="X001"/>
+ 	<property name="age" value="35"/>
+ 	<property name="subject" ref="sub"/>
+ </bean>
+ 
+ <bean id="sub" class="spring.beans.Subject">
+	<property name="subject">
+		<map>
+			<entry key="Science" value="45"/>
+			<entry key="Math" value="99"/>
+			<entry key="Physics" value="65"/>
+		</map>
+	</property> 
+ </bean>
+ 
+</beans>
