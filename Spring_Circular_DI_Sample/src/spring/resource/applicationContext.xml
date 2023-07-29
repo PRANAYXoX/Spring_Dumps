@@ -3,8 +3,12 @@
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:schemaLocation="http://www.springframework.org/schema/beans
  https://www.springframework.org/schema/beans/spring-beans.xsd">
- <bean id="b1" class="spring.javaBean.Bean_1"/>
+ <bean id="b1" class="spring.javaBean.Bean_1">
+ 	<property name="b2" ref="b2"/>
+ </bean>
  <!-- collaborators and configuration for this bean go here -->
- <bean id="b2" class="spring.javaBean.Bean_2" />
+ <bean id="b2" class="spring.javaBean.Bean_2" >
+ 	<property name="b1" ref="b1"/>
+ </bean>
  
 </beans>
