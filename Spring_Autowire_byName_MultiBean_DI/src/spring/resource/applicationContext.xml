@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+ <bean id="skills" class="spring.javaBean.Skills">
+ <!-- collaborators and configuration for this bean go here -->
+ 	<property name="subjects">
+ 		<list>
+	 		<value>English</value>
+	 		<value>Maths</value>
+	 		<value>Physics</value>
+ 		</list>
+ 	</property>
+ </bean>
+ 
+ <bean id="base" class="spring.javaBean.BaseLocation">
+ 	<property name="location">
+ 	<map>
+ 		<entry key="City" value="Noida"/>
+ 		<entry key="State" value="Uttar Pradesh"/>
+ 	</map>
+ 	</property>
+ </bean>
+ 
+ <bean id="std" class="spring.javaBean.Employee" autowire="byName">
+ 		<property name="name" value="RONNY"/>
+ 		<property name="empID" value="003WIJ"/>
+ </bean>
+ 
+</beans>
