@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+		 <bean id="sp" class="spring.beans.Student_Personal" init-method="custInit"/>
+
+		 <bean id="so" class="spring.beans.Student_Official" init-method="custInit"/>
+		 
+		 <bean id="prepro" class="spring.postprocessor.MyProcessor"/>
+ 
+</beans>
