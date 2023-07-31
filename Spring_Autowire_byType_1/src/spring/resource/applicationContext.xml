@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+  <bean id="sub" class="spring.beans.Subjects" autowire-candidate="default">
+ <!-- collaborators and configuration for this bean go here -->
+ 	<property name="subjects">
+ 		<map>
+ 			<entry key="Maths" value="89"/>
+ 			<entry key="English" value="65"/>
+ 			<entry key="Science" value="72"/>
+ 		</map>
+ 	</property>
+  </bean>
+  
+  <bean id="std" class="spring.beans.Student" autowire="byType">
+  	<property name="name" value="CHRIS"/>
+  	<property name="id" value="834005123"/>
+  </bean>
+ 
+ 
+</beans>
